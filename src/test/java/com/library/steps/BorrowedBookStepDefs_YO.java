@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-    public class BorrowedBookStepDefs {
+    public class BorrowedBookStepDefs_YO {
 
         LoginPage loginPage = new LoginPage();
         BorrowedBooksPage borrowedBooksPage = new BorrowedBooksPage();
