@@ -42,5 +42,7 @@ import org.junit.Assert;
 
             BrowserUtil.waitFor(2);
 
+            System.out.println("US_02");
+
         }
 }
