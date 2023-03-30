@@ -8,7 +8,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class UserInfoStepDefs {
+public class UserInfoStepDefs_GS {
 
     String actualUserCount;
     @Given("Establish the database connection")
