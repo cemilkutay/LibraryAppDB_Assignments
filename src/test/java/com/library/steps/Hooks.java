@@ -28,7 +28,8 @@ public class Hooks {
         System.out.println("this is coming from AFTER");
 
         if(scenario.isFailed()){
-            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            final byte[] screenshot = ((TakesScreenshot)
+                    Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
 
