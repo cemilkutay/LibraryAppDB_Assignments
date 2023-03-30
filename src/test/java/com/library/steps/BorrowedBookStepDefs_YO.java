@@ -41,6 +41,7 @@ import org.junit.Assert;
             Assert.assertEquals(actualBorrowedBookNumber,expectedBorrowedBookNumber);
 
             BrowserUtil.waitFor(2);
+            System.out.println("new");
 
 
         }
