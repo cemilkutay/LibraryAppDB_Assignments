@@ -52,6 +52,7 @@ public class BookAddStepDefs {
         bookPage.search.sendKeys(actualBookName + Keys.ENTER );
 
         BrowserUtil.waitFor(3);
+
         String actualAuthorName = bookPage.author.getAttribute("value");
         String actualISBN = bookPage.isbn.getAttribute("value");
         String actualYear = bookPage.year.getAttribute("value");
@@ -67,14 +68,10 @@ public class BookAddStepDefs {
         String expectedYear = bookInfo.get("year");
         String expectedAuthorName =bookInfo.get("author");
 
-
         Assert.assertEquals(actualBookName,expectedBookName);
         Assert.assertEquals(actualAuthorName,expectedAuthorName);
         Assert.assertEquals(actualISBN,expectedISBN);
         Assert.assertEquals(actualYear,expectedYear);
-
-
     }
-
 
 }
