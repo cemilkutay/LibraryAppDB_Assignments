@@ -21,7 +21,6 @@ public class BookAddStepDefs {
         BrowserUtil.waitFor(3);
         bookPage.addBook.click();
         BrowserUtil.waitFor(3);
-
     }
 
     @And("the librarian enter {string} {string}")
