@@ -18,6 +18,7 @@ public class BookAddStepDefs {
     BookPage bookPage= new BookPage();
     @When("the librarian click to add book")
     public void theLibrarianClickToAddBook() {
+        BrowserUtil.waitFor(3);
         bookPage.addBook.click();
         BrowserUtil.waitFor(3);
 
