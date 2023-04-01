@@ -23,9 +23,9 @@ public class BookInfoStepDefs_Zehra {
 
     }
     @Given("the user navigates to {string} page")
-    public void the_user_navigates_to_page(String Books) {
+    public void the_user_navigates_to_page(String module) {
         BrowserUtil.waitFor(1);
-        bookPage.navigateModule(Books);
+        bookPage.navigateModule(module);
 
     }
     @When("the user searches for {string} book")
