@@ -47,18 +47,23 @@ public class BookAddStepDefs {
     }
 
     @And("verify {string} information must match with DB")
-    public void verifyInformationMustMatchWithDB(String actualBookName) {
+    public void verifyInformationMustMatchWithDB(String BookName) {
 
-        bookPage.search.sendKeys(actualBookName + Keys.ENTER );
+        bookPage.search.sendKeys(BookName + Keys.ENTER );
 
         BrowserUtil.waitFor(3);
+        BrowserUtil.clickWithJS(bookPage.lastPage);
+        BrowserUtil.waitFor(3);
+        int lastRow = bookPage.allRows.size();
 
-        String actualAuthorName = bookPage.author.getAttribute("value");
-        String actualISBN = bookPage.isbn.getAttribute("value");
-        String actualYear = bookPage.year.getAttribute("value");
+        String actualISBN = bookPage.tableText(lastRow,2);
+        String actualBookName = bookPage.tableText(lastRow,3);
+        String actualAuthorName = bookPage.tableText(lastRow,4);
+        String actualYear = bookPage.tableText(lastRow,6);
 
         String query="select * from books\n" +
-                "where name='"+actualBookName+"'";
+                "where name='"+actualBookName+"'\n" +
+                "order by id desc;";
         DB_Util.runQuery(query);
         Map<String, String> bookInfo = DB_Util.getRowMap(1);
         System.out.println("bookInfo = " + bookInfo);
