@@ -17,7 +17,7 @@ Feature: Books module
     And verify "<Book Name>" information must match with DB
 
     Examples:
-      | Book Name             | ISBN     | Year | Author          | Book Category        |
-      | Clean Code            | 09112021 | 2021 | Robert C.Martin | Drama                |
-      | Head First Java       | 10112021 | 2021 | Kathy Sierra    | Action and Adventure |
-      | The Scrum Field Guide | 11112021 | 2006 | Mitch Lacey     | Short Story          |
+      | Book Name               | ISBN     | Year | Author          | Book Category        |
+      | Clean Code 1            | 09112021 | 2021 | Robert C.Martin | Drama                |
+      | Head First Java 1       | 10112021 | 2021 | Kathy Sierra    | Action and Adventure |
+      | The Scrum Field Guide 1 | 11112021 | 2006 | Mitch Lacey     | Short Story          |
