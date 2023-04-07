@@ -1,7 +1,7 @@
 @B28G51-257
 Feature: As a librarian, I want to know borrowed books number
 
- @B28G51-256 @ui @db
+ @B28G51-256 @ui @db @yasemin
   Scenario: verify the total amount of borrowed books
     Given the "librarian" on the home page_YO
     When the librarian gets borrowed books number_YO
