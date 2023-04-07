@@ -60,6 +60,15 @@ public class BookPage extends BasePage {
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
+    @FindBy(xpath = "//a[@title='Next']")
+    public WebElement nextPage;
 
+    @FindBy(xpath = "//a[@title='Last']")
+    public WebElement lastPage;
+
+    public String tableText (int row, int column){
+        String xpath = "//tbody/tr["+row+"]/td["+column+"]";
+        return Driver.getDriver().findElement(By.xpath(xpath)).getText();
+    }
 
 }
