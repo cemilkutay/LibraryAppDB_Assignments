@@ -19,13 +19,13 @@ public class BookInfoStepDefs_Zehra {
     @Given("the {string} on the home page")
     public void the_on_the_home_page(String userType) {
         LoginPage loginPage =new LoginPage();
-        loginPage.login(userType);
+        loginPage.login("librarian");
 
     }
     @Given("the user navigates to {string} page")
-    public void the_user_navigates_to_page(String module) {
+    public void the_user_navigates_to_page(String Books) {
         BrowserUtil.waitFor(1);
-        bookPage.navigateModule(module);
+        bookPage.navigateModule(Books);
 
     }
     @When("the user searches for {string} book")
